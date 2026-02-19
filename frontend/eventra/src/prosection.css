@@ -1,0 +1,98 @@
+.pro-section {
+  margin-top: -25px;
+  padding: 40px 60px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: 30px;
+  color: white;
+}
+
+.pro-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Left */
+.pro-left {
+  flex: 1;
+  min-width: 320px;
+}
+
+.pro-left h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.pro-left p {
+  color: #cbd5e1;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.pro-left span {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+/* Features */
+.pro-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.pro-btn {
+  padding: 16px 36px;
+  font-size: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.pro-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.4);
+}
+
+/* Right Side Cards */
+.pro-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  min-width: 250px;
+}
+
+.pro-card {
+  background: linear-gradient(145deg, #1e293b, #0f172a);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.pro-card:hover {
+  transform: translateY(-6px);
+}
+
+.pro-card h4 {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.pro-card h3 {
+  font-size: 26px;
+  color: #3b82f6;
+}

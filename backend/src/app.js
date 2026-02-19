@@ -1,0 +1,29 @@
+import dotenv from "dotenv"
+dotenv.config();
+import express from "express"
+import connectDB from "../config/connectDB.js";
+import router from "../routes/user.routes.js";
+import cors from 'cors';
+const app = express();
+const port = 3000
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}))
+app.use(express.json())
+
+app.use("/",router)
+const startServer = async () =>{
+    try{
+    await connectDB();
+app.listen(port,() =>{
+    console.log("Connected to Port",port);
+})
+}
+catch(err){
+    console.error("Failed to start server:", err.message);
+    process.exit(1);
+  }
+}
+
+startServer();
