@@ -123,7 +123,16 @@ const EventDetails = () => {
   return (
     <div className="event-details">
       <div className="event-hero">
-        <img src={event.bannerImage} alt={event.title} />
+        {event.bannerImage?.match(/\.(mp4|webm|ogg)$/i) ? (
+          <video
+          src={event.bannerImage}
+          autoPlay
+          muted
+          loop
+          playsInline
+          />
+        ) : (
+        <img src={event.bannerImage} alt={event.title} /> )}
       </div>
 
       <div className="event-info">

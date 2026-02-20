@@ -121,7 +121,7 @@ const CreateEvent = () => {
 
         <input
           type="file"
-          accept="image/*"
+          accept="image/* , video/mp4, video/webm"
           onChange={(e) => setImage(e.target.files[0])}
           required
         />

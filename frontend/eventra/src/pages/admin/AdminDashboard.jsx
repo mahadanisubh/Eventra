@@ -125,7 +125,16 @@ const AdminDashboard = () => {
           <div className="event-grid">
             {recent.map((event) => (
               <div className="event-card" key={event._id}>
-                <img src={event.bannerImage} alt={event.title} />
+                {event.bannerImage?.match(/\.(mp4|webm|ogg)$/i) ? (
+          <video
+          src={event.bannerImage}
+          autoPlay
+          muted
+          loop
+          playsInline
+          />
+        ) : (
+        <img src={event.bannerImage} alt={event.title} /> )}
                 <h3>{event.title}</h3>
                 <p>{event.location}</p>
                 <p>{new Date(event.date).toLocaleDateString()}</p>

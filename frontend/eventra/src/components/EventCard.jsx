@@ -18,7 +18,16 @@ const EventCard = ({
   return (
     <div className="event-card">
       <div className="event-image-wrapper">
-        <img src={event.bannerImage} alt={event.title} />
+        {event.bannerImage?.match(/\.(mp4|webm|ogg)$/i) ? (
+          <video
+          src={event.bannerImage}
+          autoPlay
+          muted
+          loop
+          playsInline
+          />
+        ) : (
+        <img src={event.bannerImage} alt={event.title} /> )}
         <span className={`status-badge ${statusClass}`}>{event.status}</span>
       </div>
 
